@@ -30,10 +30,11 @@ gorriecoe\ShortURL\Models\ShortURL:
 
 ### Internal link types
 
-This will then prepend the domain and protocol to the LinkURL.
+Depending on the link type you may or may not want to prepend the domain and protocol to the destination url.  `SiteTree` and `File` will automatically do this.  If you need to define additional internal link types you follow the example below:
 
 ```yml
 gorriecoe\ShortURL\Models\ShortURL:
   internal_types:
     - Product
+    - AnotherType
 ```
