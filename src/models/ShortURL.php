@@ -51,7 +51,7 @@ class ShortURL extends Link implements
      * Default sort ordering
      * @var array
      */
-    private static $default_sort = ['ShortURL' => 'ASC'];
+    private static $default_sort = ['Created' => 'DESC'];
 
     /**
      * Defines the max length of the urls generated.
