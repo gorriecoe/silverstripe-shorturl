@@ -1,0 +1,29 @@
+{
+  "name": "gorriecoe/silverstripe-shorturl",
+  "description": "Provides a shorter path to URLs using your domain.",
+  "type": "silverstripe-vendormodule",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Gorrie Coe",
+      "email": "gorriecoe@gmail.com"
+    }
+  ],
+  "keywords": [
+    "silverstripe",
+    "cms",
+    "shorturl",
+    "link"
+  ],
+  "homepage": "http://github.com/gorriecoe/silverstripe-shorturl",
+  "require": {
+    "silverstripe/admin": "^1.0",
+    "gorriecoe/silverstripe-link": "^1.3"
+  },
+  "extra": {
+    "installer-name": "shorturl",
+    "expose": [
+      "client"
+    ]
+  }
+}

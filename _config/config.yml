@@ -1,0 +1,17 @@
+---
+Name: shorturlconfig
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+SilverStripe\Control\Director:
+  rules:
+    'z//$ShortURL!': 'gorriecoe\ShortURL\Controllers\ShortURLController'
+---
+Only:
+  moduleexists: 'silverstripe/graphql'
+---
+SilverStripe\GraphQL\Controller:
+  schema:
+    scaffolding_providers:
+      - gorriecoe\ShortURL\Models\ShortURL

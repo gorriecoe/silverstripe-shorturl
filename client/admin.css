@@ -1,0 +1,13 @@
+.admin-shorturl {
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    margin-bottom: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.admin-shorturl a{
+    color: var(--white);
+}

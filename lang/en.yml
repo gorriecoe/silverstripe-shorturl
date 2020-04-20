@@ -1,0 +1,12 @@
+en:
+  ShortURL.ss:
+    SAVEFIRSTTOGENERATELINK: 'Save first to generate link'
+    TO: to
+  gorriecoe\ShortURL\Admin\ShortURLAdmin:
+    MENUTITLE: ShortURLS
+  gorriecoe\ShortURL\Models\ShortURL:
+    PLURALNAME: 'Short URLS'
+    PLURALS:
+      one: 'A Short URL'
+      other: '{count} Short URLS'
+    SINGULARNAME: 'Short URL'
