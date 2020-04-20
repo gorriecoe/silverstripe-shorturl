@@ -61,7 +61,7 @@ class ShortURL extends Link implements
 
     /**
      * Defines internal link types
-     * This will then prepend the domain and protoocol to the LinkURL.
+     * This will then prepend the domain and protocol to the LinkURL.
      *
      * @var array
      */
