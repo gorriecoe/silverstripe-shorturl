@@ -16,3 +16,13 @@ composer require gorriecoe/silverstripe-shorturl
 ## Maintainers
 
 - [Gorrie Coe](https://github.com/gorriecoe)
+
+## Config
+
+```yml
+gorriecoe\ShortURL\Models\ShortURL:
+  url_length: 5
+  internal_types:
+    - File
+    - SiteTree
+```
