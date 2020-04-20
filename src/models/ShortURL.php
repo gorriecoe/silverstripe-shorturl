@@ -206,7 +206,7 @@ class ShortURL extends Link implements
         if (in_array($this->Type, $internalTypes)) {
             $linkURL = Controller::join_links([
                 Director::absoluteBaseURL(),
-                $this->ShortURL
+                $linkURL
             ]);
         }
 
