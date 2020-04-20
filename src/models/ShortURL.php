@@ -58,6 +58,15 @@ class ShortURL extends Link implements
      * @var int
      */
     private static $url_length = 5;
+
+    /**
+     * Defines internal link types
+     * This will then prepend the domain and protoocol to the LinkURL.
+     *
+     * @var array
+     */
+    private static $internal_types = [];
+
     /**
      * CMS Fields
      * @return FieldList
@@ -179,7 +188,29 @@ class ShortURL extends Link implements
             'z',
             $this->ShortURL
         ]);
+    }
 
+    /**
+     * Prepend the domain and protoocol to the LinkURL if its internal.
+     * @return string
+     */
+    public function getLinkURL()
+    {
+        $linkURL = parent::getLinkURL();
+
+        $internalTypes = array_merge(
+            $this->config()->get('internal_types'),
+            ['File','SiteTree']
+        );
+
+        if (in_array($this->Type, $internalTypes)) {
+            $linkURL = Controller::join_links([
+                Director::absoluteBaseURL(),
+                $this->ShortURL
+            ]);
+        }
+
+        return $linkURL;
     }
 
     public function provideGraphQLScaffolding(SchemaScaffolder $scaffolder)
